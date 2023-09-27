@@ -25,15 +25,15 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Update Readme
         run: |
-          echo `date` >> README.md
+            echo `date` >> README.md
       - name: Commit
-      run: |
-        git config --global user.email jd965303@gmail.com
-        git config --global user.name holehole5566
-        git add .
-        git commit -m"action:`date`"
-        git pull --rebase
+        run: |
+          git config --global user.email jd965303@gmail.com
+          git config --global user.name holehole5566
+          git add .
+          git commit -m"action:`date`"
+          git pull --rebase
       - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
