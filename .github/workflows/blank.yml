@@ -22,9 +22,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: 'Checkout codes'
+        uses: actions/checkout@v1
       # Runs a set of commands using the runners shell
       - name: Update Readme
         run: |
+            ls -al
             echo `date` >> README.md
       - name: Commit
         run: |
