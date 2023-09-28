@@ -26,7 +26,7 @@ jobs:
       - name: Update Readme
         run: |
             ls -al
-            echo `date` >> README.md
+            echo `date  ` >> README.md
       - name: Commit
         run: |
           git config --global user.email jd965303@gmail.com
